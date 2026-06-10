@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Tecnología Abigail Arevalo</title>
+    <link rel="icon" type="image/png" href="Componentess/ISOTIPO AMARILLO.png">
+
+    <style>
+        html, body {
+            height: auto;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background-color: rgb(181, 207, 239);
+        }
+        
+        h1 {
+            color: white;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #eb4db7, 0 0 10px #eb4db7, 0 0 20px #eb4db7, 0 0 40px #eb4db7;
+            animation: parpadeo 1.5s infinite alternate;
+        }
+
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; text-shadow: 0 0 5px #eb4db7, 0 0 10px #eb4db7, 0 0 20px #eb4db7, 0 0 40px #eb4db7; }
+            50% { opacity: 0.8; text-shadow: 0 0 2px #eb4db7, 0 0 5px #eb4db7; }
+        }
+
+        .semana {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 8px solid #eb4db7;
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .semana:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(188, 19, 254, 0.2);
+        }
+
+        /* --- AJUSTES DE CONTENIDO MULTIMEDIA --- */
+        .contenido-multimedia {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .texto-descripcion {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .media-container {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        /* Ajuste para que las imágenes no se estiren y queden estéticas */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Ajuste para el PDF */
+        embed {
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+
+        /* Ajuste para el Video */
+        video {
+            width: 100%;
+            max-width: 500px; /* Tamaño máximo para que no sea gigante */
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10% ;
+            border-top: 1px solid rgb(175, 202, 243);
+            background-color: rgb(175, 202, 243);
+        }
+
+        footer img {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+            cursor: pointer;
+        }
+
+        footer img:hover {
+            transform: scale(1.15);
+            filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px #9ac0e9);
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bitácora Segunda y Tercera Unidad</h1>
+    </header>
+
+    <main>
+        <h4>Contenido de mi página WEB</h4>
+
+        <!-- SEMANA 1: PDF -->
+        <div class="semana">
+            <h2>Semana 1: Mi archivo PDF</h2>
+            <p>A continuación puedes visualizar el documento elaborado en clase:</p>
+            
+            <embed src="Componentess/Arduino Abigail Arevalo.pdf" type="application/pdf" height="500px" />
+            
+            <p style="margin-top: 15px; font-weight: bold; text-align: center;">
+                <a href="Componentess/Arduino Abigail Arevalo.pdf" target="_blank" style="color: #eb4db7; text-decoration: none;">
+                    Click aquí para descargarlo
+                </a>
+            </p>
+        </div>
+
+        <!-- SEMANA 2: IMAGEN -->
+        <div class="semana">
+            <h2>Semana 2: Arduino Tinkercad</h2>
+            <div class="contenido-multimedia">
+                <div class="texto-descripcion">
+                    <p>A continuación puedes visualizar la imagen del trabajo realizado en clase utilizando la plataforma de simulación Tinkercad.</p>
+                </div>
+                <div class="media-container">
+                    <img src="Componentess/captura tinkercard.png" alt="Proyecto Arduino en Tinkercad">
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 3: VIDEO -->
+        <div class="semana">
+            <h2>Semana 3: Mi Video</h2>
+            <div class="contenido-multimedia">
+                <div class="texto-descripcion">
+                    <p>En este video se muestra el funcionamiento del circuito programado y ensamblado durante la sesión práctica.</p>
+                </div>
+                <div class="media-container">
+                    <video controls>
+                        <source src="Componentess/video abi 11e.mp4" type="video/mp4">
+                        Tu navegador no soporta el formato de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <span>2026 @abi.aars</span>
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="Logo Colegio" width="200">
+    </footer>
+</body>
+</html>
